@@ -1,9 +1,9 @@
 package design.morristech.openweather.data
 
-import android.location.Location
 import design.morristech.openweather.core.Result
 import design.morristech.openweather.data.local.model.FavouriteForecast
 import design.morristech.openweather.data.local.model.Forecast
+import design.morristech.openweather.data.local.model.Location
 import kotlinx.coroutines.flow.Flow
 
 interface WeatherRepository {

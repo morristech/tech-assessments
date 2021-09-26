@@ -4,9 +4,11 @@ import androidx.annotation.Keep
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
 import design.morristech.openweather.core.Pressure
 import design.morristech.openweather.core.Temperature
 import design.morristech.openweather.core.Wind
+import design.morristech.openweather.data.db.Converters
 import java.util.*
 
 @Keep
@@ -17,12 +19,15 @@ data class Forecast(
     var locationName: String,
     val longitude: Double,
     val latitude: Double,
+    @TypeConverters(Converters::class)
     val timestamp: Calendar = Calendar.getInstance(),
     var wasOpenedLast: Boolean = true,
     var isFavourite: Boolean = false,
     @Embedded
     val currentForecast: CurrentForecast,
+    @TypeConverters(Converters::class)
     val hourForecastList: List<HourForecast>,
+    @TypeConverters(Converters::class)
     val dayForecastList: List<DayForecast>
 ) {
     /**

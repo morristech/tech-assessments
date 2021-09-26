@@ -27,7 +27,7 @@ object ApiModule {
     @Provides
     @Singleton
     internal fun provideCache(@ApplicationContext context: Context): Cache {
-        val cacheSize = 10 * 1024 * 1024.toLong() // 10 MB
+        val cacheSize = 10 * 1024 * 1024.toLong()
         val httpCacheDirectory = File(context.cacheDir, "http-cache")
         return Cache(httpCacheDirectory, cacheSize)
     }
