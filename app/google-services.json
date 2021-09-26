@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "176125615312",
+    "project_id": "backbase-openweather",
+    "storage_bucket": "backbase-openweather.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176125615312:android:d56487d71e03535b9c92d5",
+        "android_client_info": {
+          "package_name": "design.morristech.openweather"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176125615312-d38772fnht15tb031098a5n1eosiipsb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjhIyMjK1TjwSPrZC3h2JB_79FrqlHAN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176125615312-d38772fnht15tb031098a5n1eosiipsb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
