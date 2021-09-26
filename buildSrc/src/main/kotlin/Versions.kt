@@ -14,10 +14,10 @@ object Versions {
     const val COROUTINES = "1.5.1-native-mt"
 
     // Libs
+    const val OK_HTTP = "4.3.1"
     const val RETROFIT2 = "2.9.0"
     const val RETROFIT2_GSON = "2.9.0"
-    const val GSON = "2.8.6"
-    const val MOSHI = "1.9.2"
+    const val MOSHI = "1.12.0"
     const val ROOM = "2.2.5"
     const val MATERIAL_DIALOGS = "3.3.0"
     const val HILT = "2.38.1"
@@ -43,10 +43,9 @@ object Versions {
 object Libs {
     const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.KOTLIN}"
     const val COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.COROUTINES}"
+    const val OK_HTTP_LOGGER = "com.squareup.okhttp3:logging-interceptor:${Versions.OK_HTTP}"
     const val RETROFIT2 = "com.squareup.retrofit2:retrofit:${Versions.RETROFIT2}"
-    const val RETROFIT2_GSON_CONVERTER = "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT2_GSON}"
     const val RETROFIT2_MOSHI_CONVERTER = "com.squareup.retrofit2:converter-moshi:${Versions.RETROFIT2_GSON}"
-    const val GSON = "com.google.code.gson:gson:${Versions.GSON}"
     const val MOSHI = "com.squareup.moshi:moshi-kotlin:${Versions.MOSHI}"
     const val MOSHI_CODE_GEN = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.MOSHI}"
     const val ROOM_RUNTIME = "androidx.room:room-runtime:${Versions.ROOM}"

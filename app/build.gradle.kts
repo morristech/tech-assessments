@@ -45,10 +45,11 @@ android {
         val properties = Properties().apply {
             load(project.rootProject.file("local.properties").inputStream())
         }
+        val openWeatherMapBaseUrl: String = properties.getProperty("openWeatherMap.baseUrl", "")
         val openWeatherMapApiKey: String = properties.getProperty("openWeatherMap.apiKey", "")
         val googleMapsApiKey: String = properties.getProperty("google.maps.apiKey", "")
         it.buildConfigField("String", "API_KEY_OPEN_WEATHER_MAP", "\"${openWeatherMapApiKey}\"")
-        it.buildConfigField("String", "API_BASE_URL", "https://api.openweathermap.org")
+        it.buildConfigField("String", "API_BASE_URL", "\"${openWeatherMapBaseUrl}\"")
         it.resValue(
             "string",
             "google_maps_key",
@@ -115,11 +116,10 @@ dependencies {
 
     // Network
     implementation(Libs.RETROFIT2)
-    implementation(Libs.GSON)
-    implementation(Libs.RETROFIT2_GSON_CONVERTER)
+    implementation(Libs.OK_HTTP_LOGGER)
     implementation(Libs.MOSHI)
-    kapt(Libs.MOSHI_CODE_GEN)
     implementation(Libs.RETROFIT2_MOSHI_CONVERTER)
+    kapt(Libs.MOSHI_CODE_GEN)
 
     // Room - Database
     implementation(Libs.ROOM_RUNTIME)

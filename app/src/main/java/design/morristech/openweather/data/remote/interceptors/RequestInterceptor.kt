@@ -4,12 +4,13 @@ import design.morristech.openweather.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response
+import javax.inject.Inject
 
-class RequestInterceptor : Interceptor {
+class RequestInterceptor @Inject constructor(): Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
         var request: Request = chain.request()
-        val url = request.url().newBuilder()
+        val url = request.url.newBuilder()
             .addQueryParameter(APP_ID, BuildConfig.API_KEY_OPEN_WEATHER_MAP)
             .build()
         request = request.newBuilder().url(url).build()
