@@ -1,4 +1,4 @@
-package design.morristech.openweather.data.db
+package design.morristech.openweather.data.local.db
 
 import androidx.room.TypeConverter
 import com.squareup.moshi.Moshi.Builder

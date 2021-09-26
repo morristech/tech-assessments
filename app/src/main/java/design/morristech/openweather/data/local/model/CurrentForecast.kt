@@ -4,7 +4,7 @@ import androidx.annotation.DrawableRes
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
-import design.morristech.openweather.data.db.Converters
+import design.morristech.openweather.data.local.db.Converters
 
 @Entity(tableName = "current_forecast")
 data class CurrentForecast(

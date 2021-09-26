@@ -5,7 +5,7 @@ import design.morristech.openweather.core.exceptions.DataNotFound
 import design.morristech.openweather.data.AppSettings
 import design.morristech.openweather.data.WeatherDataSource
 import design.morristech.openweather.data.WeatherRepository
-import design.morristech.openweather.data.db.WeatherDataBase
+import design.morristech.openweather.data.local.db.WeatherDataBase
 import design.morristech.openweather.data.local.model.FavouriteForecast
 import design.morristech.openweather.data.local.model.Forecast
 import design.morristech.openweather.data.local.model.Location
@@ -20,9 +20,9 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class RemoteWeatherRepository @Inject constructor(
-    private val weatherDataSource: WeatherDataSource,
-    private val database: WeatherDataBase,
-    private val settings: AppSettings
+    val dataSource: WeatherDataSource,
+    val database: WeatherDataBase,
+    val settings: AppSettings
 ) : WeatherRepository {
 
     override suspend fun getForecastById(id: Int): Result<Forecast> =
@@ -35,7 +35,7 @@ class RemoteWeatherRepository @Inject constructor(
 
             // If data is outdated, then requesting new forecast
             if (forecast.isOutdated) {
-                return@withContext weatherDataSource
+                return@withContext dataSource
                     .request(forecast.toLocation(), settings.locale)
                     .onSuccess {
                         it.isFavourite = forecast.isFavourite
@@ -61,7 +61,7 @@ class RemoteWeatherRepository @Inject constructor(
                     return@withContext getUpdatedForecast(forecast)
                 }
             } else {
-                return@withContext weatherDataSource
+                return@withContext dataSource
                     .request(location, settings.locale)
                     .onSuccess { database.getForecastDao().insertForecast(it) }
             }
@@ -71,7 +71,7 @@ class RemoteWeatherRepository @Inject constructor(
      * Returns result of requesting new forecast by given old [forecast] information
      */
     override suspend fun getUpdatedForecast(forecast: Forecast): Result<Forecast> {
-        return weatherDataSource
+        return dataSource
             .request(forecast.toLocation(), settings.locale)
             .onSuccess {
                 it.id = forecast.id

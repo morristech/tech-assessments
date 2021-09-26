@@ -15,7 +15,7 @@ import javax.inject.Inject
 import kotlin.math.roundToInt
 
 class RemoteWeatherDataSource @Inject constructor(
-    private val weatherApi: WeatherApi
+    val weatherApi: WeatherApi
 ) : WeatherDataSource {
 
     companion object {

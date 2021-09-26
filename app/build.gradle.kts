@@ -6,6 +6,7 @@ plugins {
     kotlin("android")
     kotlin("kapt")
     id("io.gitlab.arturbosch.detekt")
+    id("kotlin-android")
 }
 
 android {
@@ -93,6 +94,12 @@ dependencies {
     implementation(Libs.SWIPEREFRESH_LAYOUT)
     implementation(Libs.CONSTRAINT_LAYOUT)
     implementation(Libs.INTERPOLATORS)
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:${rootProject.extra["kotlin_version"]}")
+    implementation("androidx.appcompat:appcompat:1.3.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
+    implementation("com.google.android.material:material:1.4.0")
 
     // Tests
     testImplementation(Libs.JUNIT)

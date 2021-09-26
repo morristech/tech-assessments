@@ -8,7 +8,7 @@ import androidx.room.TypeConverters
 import design.morristech.openweather.core.Pressure
 import design.morristech.openweather.core.Temperature
 import design.morristech.openweather.core.Wind
-import design.morristech.openweather.data.db.Converters
+import design.morristech.openweather.data.local.db.Converters
 import java.util.*
 
 @Keep

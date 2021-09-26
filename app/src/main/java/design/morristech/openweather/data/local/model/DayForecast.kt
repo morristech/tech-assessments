@@ -3,7 +3,7 @@ package design.morristech.openweather.data.local.model
 import androidx.annotation.DrawableRes
 import androidx.annotation.Keep
 import androidx.room.TypeConverters
-import design.morristech.openweather.data.db.Converters
+import design.morristech.openweather.data.local.db.Converters
 
 @Keep
 data class DayForecast(
