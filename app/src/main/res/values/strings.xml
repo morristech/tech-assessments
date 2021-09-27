@@ -1,4 +1,54 @@
 <resources>
     <string name="app_name">Weather Application</string>
     <string name="title_activity_maps">Map</string>
+    <string name="feels_like">Feels like:</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="pressure">Pressure</string>
+    <string name="pressure_value_pascals">hPa</string>
+    <string name="pressure_value_millimeters">mmHg</string>
+    <string name="wind_value_meters_per_second">m/s</string>
+    <string name="wind_value_kilometers_per_hour">km/h</string>
+    <string name="theme_title">Theme</string>
+    <string name="temperature_title">Temperature</string>
+    <string name="pressure_title">Pressure</string>
+    <string name="wind_title">Wind</string>
+    <string name="other_header">Other</string>
+    <string name="section_next_hours">Next 24 hours</string>
+    <string name="sign_degree" translatable="false">°</string>
+    <string name="sign_percent" translatable="false">%</string>
+    <string name="menu_navigation_description">Menu</string>
+    <string name="menu_search_description">Search</string>
+    <string name="input_enter_city">Сity or place</string>
+    <string name="header_favourite_locations">Favourite locations</string>
+    <string name="search_hint">Enter the city name or exact address</string>
+    <string name="settings_title_temperature">Temperature</string>
+    <string name="settings_title_theme">Theme</string>
+    <string name="settings_header_about">About</string>
+    <string name="settings_title_app_version">App version</string>
+    <string name="settings_title_build_number">Build Number</string>
+    <string name="settings_title_author">Author</string>
+    <string name="settings_summary_author" translatable="false">morristech</string>
+    <string name="settings_title_github" translatable="false">Github</string>
+    <string name="settings_summary_github" translatable="false">https://github.com/morristech/Assessments</string>
+    <string name="settings_name">Settings</string>
+    <string name="settings_header_units">Units</string>
+    <string name="settings_header_appearance">Appearance</string>
+    <string name="settings_title_wind">Wind</string>
+    <string name="settings_title_pressure">Pressure</string>
+    <string name="failure_connection_error">Couldn\'t load data. Please, check your internet connection!</string>
+    <string name="failure_server_error">Something went wrong… Server is not responding!</string>
+    <string name="button_try_again">Try again</string>
+    <string name="hint_title_no_locations">Failed to find location</string>
+    <string name="hint_description_no_locations">Nothing found matching your query</string>
+    <string name="hint_icon_sad" translatable="false">😔</string>
+    <string name="hint_title_no_internet">Couldn\'t load data</string>
+    <string name="hint_description_no_internet">Please, check your internet connection and try again.</string>
+    <string name="hint_icon_web" translatable="false">🌐</string>
+    <string name="hint_title_no_favourite_locations">Couldn\'t find locations</string>
+    <string name="hint_description_no_favourite_locations">Add new locations through the search icon on the main screen and try again</string>
+    <string name="day_forecast_temperature" translatable="false">%1$s°</string>
+    <string name="section_next_days">Next 5 days</string>
+    <string name="icons_title">Choose Icons</string>
+    <string name="settings_title_icons_pack">Icons Pack</string>
 </resources>

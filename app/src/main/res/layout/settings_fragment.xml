@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bottom_app_bar_height"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/CustomStyle.Settings.Header"
+                android:layout_marginStart="@dimen/settings_header_horizontal_margin"
+                android:layout_marginTop="@dimen/settings_header_vertical_margin"
+                android:layout_marginEnd="@dimen/settings_header_horizontal_margin"
+                android:layout_marginBottom="@dimen/settings_text_vertical_margin"
+                android:text="@string/settings_header_appearance" />
+
+            <design.morristech.openweather.views.SettingsItem
+                android:id="@+id/themes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:siIcon="@drawable/ic_tshirt"
+                app:siTitle="@string/theme_title"
+                app:siValue="Light" />
+
+            <design.morristech.openweather.views.SettingsItem
+                android:id="@+id/iconsPack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:siTitle="@string/settings_title_icons_pack"
+                app:siValue="@string/settings_summary_icons_pack" />
+
+            <View style="@style/CustomStyle.Divider.Thin.Horizontal" />
+
+            <TextView
+                style="@style/CustomStyle.Settings.Header"
+                android:layout_marginStart="@dimen/settings_header_horizontal_margin"
+                android:layout_marginTop="@dimen/settings_header_vertical_margin"
+                android:layout_marginEnd="@dimen/settings_header_horizontal_margin"
+                android:layout_marginBottom="@dimen/settings_text_vertical_margin"
+                android:text="@string/settings_header_units" />
+
+            <design.morristech.openweather.views.SettingsItem
+                android:id="@+id/temperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:siIcon="@drawable/ic_temperature"
+                app:siTitle="@string/settings_title_temperature"
+                app:siValue="C°" />
+
+            <design.morristech.openweather.views.SettingsItem
+                android:id="@+id/wind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:siIcon="@drawable/ic_wind"
+                app:siTitle="@string/settings_title_wind"
+                app:siValue="@string/wind_value_meters_per_second" />
+
+            <design.morristech.openweather.views.SettingsItem
+                android:id="@+id/pressure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:siIcon="@drawable/ic_pressure"
+                app:siTitle="@string/settings_title_pressure"
+                app:siValue="@string/pressure_value_pascals" />
+
+            <View style="@style/CustomStyle.Divider.Thin.Horizontal" />
+
+            <TextView
+                style="@style/CustomStyle.Settings.Header"
+                android:layout_marginStart="@dimen/settings_header_horizontal_margin"
+                android:layout_marginTop="@dimen/settings_header_vertical_margin"
+                android:layout_marginEnd="@dimen/settings_header_horizontal_margin"
+                android:layout_marginBottom="@dimen/settings_text_vertical_margin"
+                android:text="@string/settings_header_about" />
+
+            <design.morristech.openweather.views.SettingsItem
+                android:id="@+id/github"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:siIcon="@drawable/ic_github"
+                app:siTitle="@string/settings_title_github"
+                app:siValue="@string/settings_summary_github" />
+
+            <design.morristech.openweather.views.SettingsItem
+                android:id="@+id/author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:siIcon="@drawable/ic_github"
+                app:siTitle="@string/settings_title_author"
+                app:siValue="@string/settings_summary_author" />
+
+            <design.morristech.openweather.views.SettingsItem
+                android:id="@+id/appVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:siTitle="@string/settings_title_app_version"
+                app:siValue="X.X.X" />
+
+            <design.morristech.openweather.views.SettingsItem
+                android:id="@+id/buildNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:siTitle="@string/settings_title_build_number"
+                app:siValue="XXX" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground">
+
+            <TextView
+                style="@style/CustomStyle.Settings.Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_name" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

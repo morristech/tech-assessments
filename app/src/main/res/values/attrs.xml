@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="iconColor" format="reference" />
+    <attr name="cardViewBackgroundColor" format="reference" />
+    <attr name="dividerColor" format="reference" />
+    <attr name="humidityTextColor" format="reference" />
+    <attr name="windTextColor" format="reference" />
+    <attr name="pressureTextColor" format="reference" />
+    <attr name="nextHoursTextColor" format="reference" />
+
+    <declare-styleable name="PrecipitationCard">
+        <attr name="prepIcon" format="reference" />
+        <attr name="prepTitle" format="string" />
+        <attr name="prepUnit" format="string" />
+        <attr name="prepValue" format="string" />
+        <attr name="prepTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ForecastDetailsCard">
+        <attr name="detUnit" format="string" />
+        <attr name="detValue" format="string" />
+        <attr name="detDescription" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SettingsItem">
+        <attr name="siIcon" format="reference" />
+        <attr name="siTitle" format="string" />
+        <attr name="siValue" format="string" />
+    </declare-styleable>
+</resources>

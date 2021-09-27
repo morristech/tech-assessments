@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/previewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/day_margin">
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            style="@style/CustomStyle.ImageView"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/day_margin"
+            android:layout_marginEnd="@dimen/day_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/weather_clear_day" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/day_margin"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/weatherIcon"
+            app:layout_constraintStart_toEndOf="@+id/weatherIcon"
+            app:layout_constraintTop_toTopOf="@+id/weatherIcon">
+
+            <TextView
+                android:id="@+id/day"
+                style="@style/CustomStyle.Text.Primary"
+                android:layout_gravity="start"
+                tools:text="Sunday" />
+
+            <TextView
+                android:id="@+id/date"
+                style="@style/CustomStyle.Text.Secondary"
+                android:layout_gravity="start"
+                tools:text="20.06" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/highestTemperature"
+            style="@style/CustomStyle.Text.Header"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/day_margin"
+            android:minWidth="47dp"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lowestTemperature"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="+17°" />
+
+        <TextView
+            android:id="@+id/lowestTemperature"
+            style="@style/CustomStyle.Text.Header"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/day_margin"
+            android:minWidth="47dp"
+            android:textAlignment="textEnd"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/expandButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="+99°" />
+
+        <ImageView
+            android:id="@+id/expandButton"
+            style="@style/CustomStyle.Icon.Clickable"
+            android:layout_gravity="center"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_arrow_down"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/detailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:layout_height="68dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/day_margin">
+
+            <com.enxy.weather.views.ForecastDetailsCard
+                android:id="@+id/humidityCard"
+                style="@style/CustomStyle.CardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                app:detDescription="@string/humidity"
+                app:detUnit="%"
+                app:detValue="70" />
+
+            <View style="@style/CustomStyle.Divider.Thin.Vertical" />
+
+            <com.enxy.weather.views.ForecastDetailsCard
+                android:id="@+id/windCard"
+                style="@style/CustomStyle.CardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                app:detDescription="@string/wind"
+                app:detUnit="m/s"
+                app:detValue="4" />
+
+            <View style="@style/CustomStyle.Divider.Thin.Vertical" />
+
+            <com.enxy.weather.views.ForecastDetailsCard
+                android:id="@+id/pressureCard"
+                style="@style/CustomStyle.CardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                app:detDescription="@string/pressure"
+                app:detUnit="hPa"
+                app:detValue="1023" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

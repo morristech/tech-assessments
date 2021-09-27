@@ -4,6 +4,7 @@ plugins {
     id("com.android.application")
     id("dagger.hilt.android.plugin")
     kotlin("android")
+    kotlin("android.extensions")
     kotlin("kapt")
     id("io.gitlab.arturbosch.detekt")
     id("kotlin-android")

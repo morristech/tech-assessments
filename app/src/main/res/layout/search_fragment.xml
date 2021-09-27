@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/searchCityEditText"
+        style="@style/CustomStyle.EditText"
+        android:hint="@string/input_enter_city"
+        android:inputType="text" />
+
+    <View style="@style/CustomStyle.Divider.Thin.Horizontal" />
+
+    <FrameLayout
+        android:id="@+id/hints"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="56dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <include layout="@layout/search_hint_enter_text" />
+
+        <include layout="@layout/search_hint_no_internet" />
+
+        <include layout="@layout/search_hint_no_locations" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/locationList"
+        style="@style/CustomStyle.Text.Header"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_location" />
+</LinearLayout>

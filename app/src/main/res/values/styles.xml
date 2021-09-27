@@ -1,0 +1,187 @@
+<resources>
+
+    <style name="CustomStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="CustomStyle.Settings" />
+
+    <style name="CustomStyle.Settings.Icon">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">30dp</item>
+    </style>
+
+    <style name="CustomStyle.Settings.Name" parent="CustomStyle.Text.Section" />
+
+    <style name="CustomStyle.Settings.Title" parent="CustomStyle.Text.Primary">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="CustomStyle.Settings.Header" parent="CustomStyle.Text.Header">
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/open_sans_bold</item>
+<!--        <item name="android:textColor">@color/settingsHeaderColor</item>-->
+    </style>
+
+    <style name="CustomStyle.Settings.Summary" parent="CustomStyle.Text.Secondary">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="CustomStyle.SearchHint">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">@dimen/hint_layout_margin</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="CustomStyle.Text" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomStyle.Text.Primary" parent="CustomStyle.Text">
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="CustomStyle.Clickable">
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="CustomStyle.Text.Primary.Clickable" parent="CustomStyle.Text.Primary">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="CustomStyle.Text.Secondary" parent="CustomStyle.Text">
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="CustomStyle.Text.Header" parent="CustomStyle.Text.Primary">
+        <item name="android:textSize">19sp</item>
+        <item name="android:letterSpacing">0.06</item>
+    </style>
+
+    <style name="CustomStyle.Text.Section" parent="CustomStyle.Text.Primary">
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">@font/open_sans_bold</item>
+    </style>
+
+    <style name="CustomStyle.ImageView">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">50dp</item>
+    </style>
+
+    <style name="CustomStyle.ImageView.CurrentWeather" parent="CustomStyle.ImageView">
+        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="CustomStyle.Icon">
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_height">34dp</item>
+        <item name="android:layout_width">34dp</item>
+    </style>
+
+    <style name="CustomStyle.Icon.Clickable" parent="CustomStyle.Icon">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="CustomStyle.ImageView.Precipitation">
+        <item name="android:layout_height">9dp</item>
+        <item name="android:layout_width">30dp</item>
+    </style>
+
+    <style name="CustomStyle.Divider">
+        <item name="android:background">?attr/dividerColor</item>
+    </style>
+
+    <style name="CustomStyle.Divider.Thick.Horizontal" parent="CustomStyle.Divider">
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="CustomStyle.Divider.Thick.Vertical" parent="CustomStyle.Divider">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">12dp</item>
+    </style>
+
+    <style name="CustomStyle.Divider.Thin.Horizontal" parent="CustomStyle.Divider">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="CustomStyle.Divider.Thin.Vertical" parent="CustomStyle.Divider">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">1dp</item>
+    </style>
+
+    <style name="CustomStyle.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardCornerRadius">@dimen/card_radius</item>
+    </style>
+
+    <style name="CustomStyle.CardView.Outlined">
+        <item name="strokeColor">?attr/dividerColor</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="CustomStyle.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomStyle.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.ActionBar" />
+
+    <style name="CustomStyle.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textColorSecondary">?android:attr/textColorSecondary</item>
+        <item name="android:colorControlNormal">?attr/iconColor</item>
+    </style>
+
+    <style name="CustomStyle.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/bottom_app_bar_height</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="CustomStyle.BottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomStyle.BottomSheet</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="CustomStyle.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomStyle.ShapeAppearanceBottomSheetDialog
+        </item>
+    </style>
+
+    <style name="CustomStyle.ShapeAppearanceBottomSheetDialog">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+</resources>
